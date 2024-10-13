@@ -1,11 +1,12 @@
 /*Program Name: Item.java
  * Authors: Austin P
- * Date last Updated: 9/29/2024
- * Purpose: (Not complete yet) This program is the item class that defines what each item is
+ * Date last Updated: 10/12/2024
+ * Purpose: This defines the abstract item class, and the subclasses of item
  */
 
 package com.example.javafinalvideogameinventory;
 
+// Abstract class Item that contains all data required regarding an item
 public abstract class Item {
     protected String name;
     protected String description;
@@ -50,6 +51,7 @@ public abstract class Item {
     public abstract String getDetails();
 }
 
+// Weapon subclass
 class Weapon extends Item {
     public Weapon(String name, String description, String type, int quantity, String rarity, String additionalInfo) {
         super(name, description, type, quantity, rarity, additionalInfo);
@@ -62,6 +64,7 @@ class Weapon extends Item {
     }
 }
 
+// Potion subclass
 class Potion extends Item {
     public Potion(String name, String description, String type, int quantity, String rarity, String additionalInfo) {
         super(name, description, type, quantity, rarity, additionalInfo);
@@ -74,6 +77,7 @@ class Potion extends Item {
     }
 }
 
+// Armor subclass
 class Armor extends Item {
     public Armor(String name, String description, String type, int quantity, String rarity, String additionalInfo) {
         super(name, description, type, quantity, rarity, additionalInfo);
@@ -86,6 +90,7 @@ class Armor extends Item {
     }
 }
 
+// KeyItem subclass
 class KeyItem extends Item {
     public KeyItem(String name, String description, String type, int quantity, String rarity, String additionalInfo) {
         super(name, description, type, quantity, rarity, additionalInfo);
